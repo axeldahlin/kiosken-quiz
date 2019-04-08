@@ -45,6 +45,7 @@ buttons.forEach(button => button.addEventListener('click', (e) => {
         thisInput.value = thisInput.value + ' - '
       }
   }
+  thisInput.focus()
 }));
 
 // Click eventlistener for amount buttons on products

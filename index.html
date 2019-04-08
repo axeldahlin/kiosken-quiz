@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <title>Kiosken Quiz</title>
+</head>
+<body>
+  <div class="checkout-page">
+    <div class="main-container">
+      <div class="header">
+        <a href="#">
+          <i class="fas fa-arrow-circle-left"></i>
+        </a>
+        <span>Tillbehör</span>
+        <h1>Kassa</h1>
+      </div>
+      <div class="cards-container">
+        <div class="customer-data-container">
+          <div class="customer-data-card">
+              <div class="data-div">
+                <h3 class="data-header">Kunduppgifter</h3>
+                <span class="data-span">Hämta dina adressuppgifter genom att fylla i ditt personnummer.</span>
+              </div>
+              <div class="person-nummer">
+                <label for="customer-data">PERSONNUMMER:</label>
+                <img src="./images/personnummer.png" alt="border">
+                <br>
+                <input autofocus class="input" data-target="customer-data" id="customer-data"type="text" onkeydown="return false" />
+              </div>
+              <div class="data-div">
+                <span class="customer-name">Bo Göran</span>
+                <br>
+                <span class="adress">Rävgatan 1b</span>
+                <br>
+                <span class="adress">123 45 Boliden</span>
+              </div>
+          </div>
+          <div class="contact-data-card">
+            <div class="data-div">
+              <h3 class="data-header">Kontaktuppgifter</h3>
+              <span class="data-span">Fyll i ditt mobilnummer för att få ett SMS när din order är redo.</span>
+            </div>
+              <div class="telefon-nummer">
+                <img src="./images/telefonnummer.png" alt="">
+                <label for="contact-data">MOBILNUMMER:</label>
+                <div>
+                  <input class="input" data-target="contact-data" id="contact-data" type="text" onkeydown="return false" />
+                  <button class="pencil" type="button" data-target="contact-data" href="#"><i class="fas fa-pencil-alt"></i></button>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="products-card">
+          <div class="products">
+            <div class="product">
+              <img src="./images/drill.png" alt="drill">
+              <div class="prouct-name-div">
+                <span  style="font-weight:bold;">Bosch</span>
+                <br>
+                <span>PST 700 E</span>
+              </div>
+              <div class="counter" data-price="599">
+                <button type="button" data-product="1" class="product-btn increase-btn"><i class="fas fa-plus-circle"></i></button>
+                <div class="price-amount">
+                  <span id="product-1">1</span>&nbsp
+                  <span>st</span>
+                </div>
+                <button type="button" data-product="1" class="product-btn decrease-btn"><i class="fas fa-minus-circle"></i></a>
+              </div>
+              <div class="price-amount">
+                <span  class="products-total">599</span>&nbsp
+                <span>kr</span>
+              </div>
+            </div>
+            <div class="product">
+              <img src="./images/såg.png" alt="sticksåg">
+              <div class="prouct-name-div">
+                <span  style="font-weight:bold;">Bosch</span>
+                <br>
+                <span>10-delars sticksågblad trä/metal</span>
+              </div>
+              <div class="counter" data-price="139">
+                <button type="button" data-product="2" class="product-btn increase-btn"><i class="fas fa-plus-circle"></i></button>
+                <div class="price-amount">
+                  <span id="product-2">1</span>&nbsp
+                  <span>st</span>
+                </div>
+                <button type="button" data-product="2" class="product-btn decrease-btn"><i class="fas fa-minus-circle"></i></a>
+              </div>
+              <div class="price-amount">
+                <span>139</span>&nbsp
+                <span>kr</span>
+              </div>
+            </div>
+          </div>
+          <div class="home-delivery delivery">
+              <i class="fas fa-truck"></i>
+              <label onclick="updatePrices()" class="container">
+                <input id="hemleverans" name="leverans" type="radio" checked>
+                <span class="checkmark"></span>
+              </label>
+            <div class="prouct-name-div">
+                <span>Hemleverans</span>
+            </div> 
+            <div class="price-amount">
+              <span>79</span>&nbsp
+              <span>kr</span>
+            </div>
+          </div>
+          <div class="delivery">
+            <i class="fas fa-store"></i>
+            <label onclick="updatePrices()" class="container">
+              <input name="leverans" type="radio">
+              <span class="checkmark"></span>
+            </label>
+            <div class="prouct-name-div">
+              <span>Hämta i butik</span>
+            </div> 
+          </div>
+          <div class="total-to-pay">
+            <div>
+              <p class="to-pay-span">Att betala:</p>
+              <span class="moms-span" >Varav moms:</p>
+            </div>
+            <div class="total-and-moms">
+              <div>
+                <span class="to-pay-span" id="total">000</span>
+                <span class="to-pay-span">kr</span>
+              </div>
+              <div>
+                <span class="moms-span" id="moms">000</span>
+                <span class="moms-span">kr</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /cards-container -->
+      <div class="continue-shopping">
+        <a href="#"><i class="fas fa-share"></i></a>
+        <span>Fortsätt handla</span>
+      </div>
+    </div>
+    <div class="keypad-container">
+      <h2>Kassan</h2>
+      <p>Använd knappsatsen nedan för att mata in ditt personnummer respektive mobilnummer i formuläret till vänster. Välj sedan önskade leveranssätt och klicka på "Beställ".</p>
+      <div class="keypad">
+        <button class="btn" id="1">1</button>
+        <button class="btn" id="2">2</button>
+        <button class="btn" id="3">3</button>
+        <button class="btn" id="4">4</button>
+        <button class="btn" id="5">5</button>
+        <button class="btn" id="6">6</button>
+        <button class="btn" id="7">7</button>
+        <button class="btn" id="8">8</button>
+        <button class="btn" id="9">9</button>
+        <button class="btn fas fa-backspace" id="delete"></i></button>
+        <button class="btn" id="0">0</button>
+        <button class="btn fas fa-check" id="ok"></i></button>
+      </div>
+      <div class="order-div">
+        <span>BESTÄLL</span>
+        <a href="#">
+          <i class="fas fa-arrow-circle-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>

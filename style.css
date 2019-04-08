@@ -1,0 +1,470 @@
+/********** GENERAL STYLES**********/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+.border {
+  border: solid yellow 2px;
+}
+
+.checkout-page {
+  display: flex;
+  height: 100vh;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+button:focus {outline:0;}
+
+/********** MAIN-CONTAINER STYLES**********/
+.main-container {
+  height: 100%;
+  background-color: #F96800;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 130px;
+  color: white;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.header a i {
+  color: white;
+  font-size: 50px;
+}
+
+.header span {
+  font-size: 25px;
+  margin-left: 10px;
+}
+
+.header h1 {
+  width: 100%;
+  text-align: center;
+  font-weight: 300;
+  font-size: 45px;
+}
+
+.cards-container {
+  height: 100%;
+  display: flex;
+  padding: 0px 60px 60px 60px;
+}
+
+.customer-data-container {
+  min-width: 329px;
+  max-width: 329px;
+  display: flex;
+  flex-direction: column;
+}
+
+.customer-data-card {
+  flex-grow: 1;
+  margin-bottom: 10px;
+  background: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.person-nummer {
+  position: absolute;
+  top: 122px;
+  height: 113px;
+  width: 352px;
+  background: white;
+  left: -13px;
+  box-shadow: 0px 0px 15px 2px rgba(169,169,169,1);
+}
+
+.person-nummer label {
+  position: absolute;
+  top: 27px;
+  left: 35px;
+  color: #8A8A8A;
+  font-size: 14px;
+}
+
+.person-nummer img {
+  position: absolute;
+  bottom: 25px;
+  left: 26px;
+  width: 204px;
+}
+
+#customer-data {
+  border: none;
+  font-size: 30px;
+  position: absolute;
+  bottom: 33px;
+  left: 32px;
+  width: 205px;
+}
+
+.customer-name {
+  font-size: 29px;
+  font-weight: 300;
+  margin-bottom: -9px;
+  display: block;
+}
+
+.adress {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.contact-data-card {
+  height: 250px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.telefon-nummer {
+  height: 100px;  
+  width: 100%;
+  background-color: #E4E7EC;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: relative;
+}
+
+.telefon-nummer img {
+  position: absolute;
+  left: 15px;
+  bottom: 19px;
+  width: 180px;
+}
+
+#contact-data {
+  border: none;
+  font-size: 30px;
+  width: 220px;
+  background-color: #E4E7EC;
+}
+
+.telefon-nummer label {
+  margin: 0px 0 3px 24px;
+  color: #8A8A8A;
+  font-size: 14px;
+}
+
+.telefon-nummer div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 27px 20px;
+}
+
+.pencil {
+  font-size: 25px;
+  color: grey;
+  border: none;
+  background-color: #E4E7EC;
+  cursor: pointer;
+}
+
+.data-div {
+  padding: 20px;
+}
+
+.data-header {
+  font-weight: 300;
+  font-size: 28px;
+  margin-bottom: 11px;
+}
+
+.data-span {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.products-card {
+  width: 100%;
+  background: white;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 25px;
+}
+
+.products {
+  height: 100%;
+}
+
+.product {
+  display: flex;
+  border-bottom: dotted #E4E7EC 3px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product img {
+  width: 71px !important;
+  min-width: 71px !important;
+  height: 55px;
+  padding: 7px 0px;
+}
+
+.prouct-name-div {
+  width: 100%;
+}
+
+.prouct-name-div span {
+  color: #8A8A8A;
+  font-size: 18px;
+}
+
+.counter {
+  display: flex;
+  max-width: 92px;
+  min-width: 92px;
+  justify-content: space-between;
+  margin-right: 50px;
+}
+
+.counter button {
+  border: none;
+  background: white;
+}
+
+.counter button i {
+  cursor: pointer;
+  color: #F96800;
+  font-size: 22px;
+}
+
+.price-amount {
+  display: flex;
+}
+
+.price-amount span {
+  font-weight: 300;
+  font-size: 22px;
+}
+
+.delivery {
+  height: 105px;
+  border-bottom: dotted #E4E7EC 3px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.delivery i {
+  font-size: 25px;
+  color: grey;
+}
+
+.delivery .price-amount {
+  margin-left: auto;
+}
+
+.home-delivery {
+  border-top: dotted #E4E7EC 3px;
+}
+
+.total-to-pay {
+  height: 130px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.total-to-pay div {
+  text-align: right;
+}
+
+.total-and-moms {
+  width: 107px;
+}
+
+.total-and-moms div{
+  text-align: right;
+}
+
+.total-and-moms div:first-child {
+  margin: 15px 0 5px 0;
+}
+
+.to-pay-span {
+  font-weight: 300;
+  font-size: 28px;
+  margin: 15px 0 5px 0;
+}
+
+.moms-span {
+  color: #8A8A8A;
+}
+
+/********** RADIO BUTTONS STYLE STYLES**********/
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 25px;
+  margin: 0 20px 25px 20px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  border: solid orange 3px;
+  border-radius: 50%;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/********** /RADIO BUTTONS STYLE STYLES**********/
+.continue-shopping {
+  background-color: #C55500;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.continue-shopping a i {
+  font-size: 30px;
+  color: white;
+}
+
+.continue-shopping span {
+  color: white;
+  margin-left: 18px;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+/********** KEYPAD-CONTAINER STYLES**********/
+.keypad-container {
+  height: 100%;
+  background-color: #C55500;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+}
+
+.keypad-container h2 {
+  margin: 0 40px 20px 40px;
+  font-weight: 300;
+  font-size: 27px;
+}
+
+.keypad-container p {
+  margin: 0 40px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+.keypad {
+  width: 290px;
+  display: grid;
+  align-self: center;
+  grid-template-columns: 90px 90px 90px;
+  grid-template-rows: 90px 90px 90px 90px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin: 57px auto;
+}
+
+.btn {
+  color: white;
+  font-size: 45px;
+  background: #914107;
+  border: none;
+  cursor: pointer;
+}
+
+.btn.fas {
+  font-size: 35px;
+}
+
+.clicked {
+  transform: scale(1.1);
+  box-shadow: 0px 0px 60px 3px #f1c40f inset;
+}
+
+.order-div {
+  height: 94px;
+  background: #6B3400;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+}
+
+
+.order-div a i {
+  color: white;
+  font-size: 50px;
+}
+
+.order-div span {
+  font-size: 34px;
+  color: white;
+  font-weight: 300;
+}
